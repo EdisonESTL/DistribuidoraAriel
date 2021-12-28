@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DistribuidoraAriel.Views.EntregasView">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView>
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Cantidad" Grid.Column="0"/>
+                        <Label Text="Producto" Grid.Column="1"/>
+                        <Label Text="Vendido" Grid.Column="2"/>
+                        <Label Text="Comprado" Grid.Column="3"/>
+                    </Grid>
+                </ListView.Header>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

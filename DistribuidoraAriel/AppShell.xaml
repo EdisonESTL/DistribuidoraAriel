@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Views="clr-namespace:DistribuidoraAriel.Views"
+             x:Class="DistribuidoraAriel.AppShell">
+    <ShellContent Title="Productos" ContentTemplate="{DataTemplate Views:ProductosView}"/>
+    <ShellContent Title="Distribuir" ContentTemplate="{DataTemplate Views:DistribuirView}"/>
+    <ShellContent Title="Entregas" ContentTemplate="{DataTemplate Views:EntregasView}"/>
+</Shell>

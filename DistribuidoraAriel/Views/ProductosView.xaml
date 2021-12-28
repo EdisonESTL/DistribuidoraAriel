@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:DistribuidoraAriel.ViewModels"
+             x:Class="DistribuidoraAriel.Views.ProductosView">
+    <ContentPage.BindingContext>
+        <ViewModel:ProductosViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Hola soy Yintu, ingresa tus productos"
+                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Nombre" Grid.Column="0" Grid.Row="0"/>
+                <Label Text="Precio Compra" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="Precio Venta" Grid.Column="0" Grid.Row="2"/>
+                <Label Text="Cantidad" Grid.Column="0" Grid.Row="3"/>
+                <Label Text="Total" Grid.Column="0" Grid.Row="4"/>
+                <Entry Text="{Binding Nombre}" Grid.Column="1" Grid.Row="0"/>
+                <Entry Text="{Binding PrecioCompra}"  Grid.Column="1" Grid.Row="1" Keyboard="Numeric"/>
+                <Entry Text="{Binding PrecioVenta}"  Grid.Column="1" Grid.Row="2" Keyboard="Numeric"/>
+                <Entry Text="{Binding Cantidad}"  Grid.Column="1" Grid.Row="3" Keyboard="Numeric"/>
+                <Label Text="{Binding TotalCompra}"  Grid.Column="1" Grid.Row="4"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Cancelar"/>
+                <Button Text="Guardar"/>
+            </StackLayout>
+
+            <StackLayout HeightRequest="100">
+                <CollectionView ItemsLayout="HorizontalGrid" Header="{Binding .}">
+                    <CollectionView.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Cantidad" Grid.Column="0"/>
+                                <Label Text="Nombre" Grid.Column="1"/>
+                                <Label Text="Precio Unitario" Grid.Column="2"/>
+                                <Label Text="Total" Grid.Column="3"/>
+                                <Label Text="Total" Grid.Column="4"/>
+                                <Label Text="Total" Grid.Column="5"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.HeaderTemplate>
+                </CollectionView>
+                
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
